@@ -1,0 +1,102 @@
+.wrap {
+    margin: 30px auto;
+    /* margin: auto */
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-flow é uma propriedade que modifica tanto flex-direction quanto flex-wrap */
+    justify-content: center;
+    width: 90vw;
+    /* medidas em vw se refere a uma porcentagem baseada no tamanho do dispositivo; difere do % poruqe este se baseia no tamanho da div parent do conteúdo cujo tamanho está*/
+    /* medidas em em se baseia em mútiplos da medida padrão do computador; muito bom para fontes responsivas, pois se baseia na fonte padrão  */
+    
+}
+
+.box {
+    color: rgb(0, 0, 247);
+    background-color: #ddd;
+    width: 20%;
+    /* quando se usa porcentagem os tamanhos deffinidos se baseiam no tamanho da tela (viewport) */
+    line-height: 20pt;
+    text-align: center;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+
+.red {
+    background: rgba(139, 0, 0, 0.5);
+}
+
+.scaleX {
+    transform: scaleX(1);
+    transition: transform 1s ease; /* transition linear coloca tanto o início quanto o fim da animação com o mesmo tempo de transição; ease procurar no w3*/
+}
+
+.box:hover .scaleX {
+    transform: scaleX(2)
+}
+
+.scaleY {
+    transform: scaleY(1);
+    transition: transform 1s ease;
+}
+
+.box:hover .scaleY {
+    transform: scaleY(2)
+}
+
+.scale {
+    transform: scale(1,1);
+    transition: transform 1s ease;
+}
+
+.box:hover .scale {
+    transform: scale(2,2);
+}
+
+.skewX {
+    transform: skewX(1);
+    transition: transform 1s linear;
+}
+.box:hover .skewX {
+    transform: skewX(40deg);
+    /* deg é degrees que é a medida de ângulo */
+}
+
+.skew {
+    transform: skew(1deg);
+    transition: transform 1s linear;
+}
+
+.box:hover .skew {
+    transform: skew(20deg, -20deg);
+}
+
+.translateX {
+    transform: translateX(1);
+    transition: transform 1s linear;
+}
+
+.box:hover .translateX {
+    transform: translateX(10em);
+}
+
+.translate {
+    transform: translate(1, 1);
+    transition: transform 1s linear;
+}
+
+.box:hover .translate {
+    transform: translate(10em, 10em);
+}
+
+.matrix {
+    transform: matrix(0, 0, 0 , 0, 0, 0);
+    /* matrix(a, b, c, d, e, f), em que "a" e "b" definem scale, "c" e "d" definem skew e "e" e "f" definem translate*/
+}
+
+.box:hover .matrix {
+    transform: matrix();
+}
+
+
+/* procurar site do lhbzr; procurar sobre svg; procurar keyframe; bnengenharia */
